@@ -9,10 +9,10 @@ pipeline {
                 echo "Build Successful."
             }
         }
-        post {
+    }
+    post {
            failure {
                emailext attachLog:true, bcc: '', body: 'Pipeline is failed!', cc: '', from: '', replyTo: '', subject: 'post Build Action Email', to: 'gaurav.shukla@knoldus.com'
         }
       }
-    }
 }
