@@ -8,5 +8,10 @@ pipeline {
     	        echo "Build Successful."
     	    }
     	}
+        post {
+          failure {
+            mail to: team@example.com, subject: ‘The Pipeline failed :(‘
+         }
+       }
     }
 }
