@@ -12,7 +12,7 @@ pipeline {
     }
     post {
            failure {
-               emailext attachLog:true, bcc: '', body: 'Pipeline is failed!', cc: '', from: '', replyTo: '', subject: 'post Build Action Email', to: 'gaurav.shukla@knoldus.com'
+               emailext attachLog:true, body: 'Pipeline is failed!', subject: 'post Build Action Email', to: 'gaurav.shukla@knoldus.com'
         }
       }
 }
