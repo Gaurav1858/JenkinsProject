@@ -9,10 +9,10 @@ pipeline {
     	        echo "Build Successful."
     	    }
     	}
-        post {
+    }
+    post {
           failure {
             mail to: uploadyourbrain18@gmail.com, subject: ‘The Pipeline failed :(‘
         }
       }
-    }
 }
