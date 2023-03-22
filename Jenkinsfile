@@ -4,8 +4,10 @@ pipeline {
     stages {
     	stage ('Testing') {
     	    steps {
-    	        sh javac Hello.java
+    	        sh '''
+                javac Hello.java
     	        sh java Hello
+                '''
     	        echo "Build Successful."
     	    }
     	}
