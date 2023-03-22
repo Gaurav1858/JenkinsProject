@@ -4,6 +4,7 @@ pipeline {
     stages {
     	stage ('Testing') {
     	    steps {
+                echo "In Testing Environment"
     	        sh '''
                 javac Hello.java
     	        java Hello
