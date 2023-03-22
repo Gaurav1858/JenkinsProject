@@ -13,8 +13,11 @@ pipeline {
     	}
     }
     post {
-          failure {
-            mail bcc: '', body: 'test email for pipeline.', cc: '', from: '', replyTo: '', subject: 'Test Email', to: 'gaurav.shukla@knoldus.com'
+           failure {
+               emailext attachLog:true, body: 'Pipeline is failed!', subject: 'Post Build Action Email', to: 'gaurav.shukla@knoldus.com'
+        }
+           success {
+               emailext attachLog:true, body: 'Pipeline is successful!', subject: 'Post Build Action Email', to: 'gaurav.shukla@knoldus.com'
         }
       }
 }
