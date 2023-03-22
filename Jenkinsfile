@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
+                echo "In Development Environment"
                 sh '''
                     javac Hello2.java
                     java Hello2
