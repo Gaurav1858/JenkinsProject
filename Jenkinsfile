@@ -6,7 +6,7 @@ pipeline {
     	    steps {
     	        sh '''
                 javac Hello.java
-    	        sh java Hello
+    	        java Hello
                 '''
     	        echo "Build Successful."
     	    }
